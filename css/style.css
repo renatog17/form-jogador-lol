@@ -12,3 +12,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
   }
+
+  .form{
+    background-color: #86d1f6;
+    width: 80%;
+  }
