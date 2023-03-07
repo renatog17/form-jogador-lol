@@ -26,6 +26,7 @@ buttonSubmitForm.addEventListener("click", e =>{
     var campeoes = document.getElementById('campeoes').value
     var rolePrimaria = document.getElementById('role-primaria').value
     var roleSecundaria = document.getElementById('role-secundaria').value
+    var imagem = document.getElementById('imagem').value
 
     var jogador = {
         "nickname" : nickname,
@@ -34,13 +35,32 @@ buttonSubmitForm.addEventListener("click", e =>{
         "tier":tier,
         "campeoes":campeoes,
         "rolePrimaria":rolePrimaria,
-        "roleSecundaria":roleSecundaria
+        "roleSecundaria":roleSecundaria,
+        "imagem":imagem
     }
     criarCard(jogador)
 })
 function criarCard(jogador){
     var cardJogador = document.createElement("div")
     cardJogador.classList = ["card-jogador"]
+    if(jogador.divisao === "Ferro"){
+        cardJogador.style.backgroundColor = "#541212"
+    }
+    if(jogador.divisao === "Bronze"){
+        cardJogador.style.backgroundColor = "#cd7f32"
+    }
+    if(jogador.divisao === "Prata"){
+        cardJogador.style.backgroundColor = "#F0EEED"
+    }
+    if(jogador.divisao === "Ouro"){
+        cardJogador.style.backgroundColor = "#F2CD5C"
+    }
+    if(jogador.divisao === "Platina"){
+        cardJogador.style.backgroundColor = "#FFFFFF"
+    }
+    if(jogador.divisao === "Diamante"){
+        cardJogador.style.backgroundColor = "#E3F6FF"
+    }
     cardJogador.innerHTML = jogador.nickname +"<br>"
     +jogador.nome+"<br>"
     +jogador.divisao+"</br>"
@@ -48,6 +68,7 @@ function criarCard(jogador){
     +jogador.campeoes+"</br>"
     +jogador.rolePrimaria+"</br>"
     +jogador.roleSecundaria+"</br>"
+    +"<img src='"+jogador.imagem+"'class='imagem'></img>"
     var divCards = document.getElementById("cards")
     divCards.appendChild(cardJogador)
     console.log(divCards)
