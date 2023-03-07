@@ -22,16 +22,17 @@
     </header>
     <form class="form">
         <div class="formulario-input">
-            <label for="nickname">NickName</label>
-            <input name="nickname" id="nickname" required />
+            <label for="nickname" >NickName</label>
+            <input name="nickname" value="InvernoRússo" id="nickname" required />
         </div>
         <div class="formulario-input">
             <label for="nome">Nome</label>
-            <input name="nome" id="nome" required>
+            <input name="nome" value="Renato" id="nome" required>
         </div>
         <div class="formulario-input">
             <label for="divisao">Divisão</label>
             <select name="divisao" id="divisao">
+                <option ></option>
                 <option value="Diamante">Diamante</option>
                 <option value="Platina">Platina</option>
                 <option value="Ouro">Ouro</option>
@@ -43,6 +44,7 @@
         <div class="formulario-input">
             <label for="tier">Tier</label>
             <select name="tier" id="tier">
+                <option ></option>
                 <option value="I">I</option>
                 <option value="II">II</option>
                 <option value="III">III</option>
@@ -52,11 +54,13 @@
         <div class="formulario-input">
             <label for="campeoes">Campeões</label>
             <select name="campeoes" id="campeoes">
+                <option ></option>
             </select>
         </div>
         <div class="formulario-input">
             <label for="role-primaria">Role Primária</label>
             <select name="role-primaria" id="role-primaria">
+                <option ></option>
                 <option value="Top">Top</option>
                 <option value="Jungle">Jungle</option>
                 <option value="Mid">Mid</option>
@@ -67,6 +71,7 @@
         <div class="formulario-input">
             <label for="role-primaria">Role Secundária</label>
             <select name="role-secundaria" id="role-secundaria">
+                <option ></option>
                 <option value="Top">Top</option>
                 <option value="Jungle">Jungle</option>
                 <option value="Mid">Mid</option>
@@ -74,9 +79,9 @@
                 <option value="Sup">Sup</option>
             </select>
         </div>
+        <button id="bt-enviar-form" >Enviar</button>
     </form>
-    <div>
-        Aqui os cards
+    <div class="cards" id="cards">
     </div>
     <footer>
         Aqui o rodapé
