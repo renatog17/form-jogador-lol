@@ -71,5 +71,4 @@ function criarCard(jogador){
     +"<img src='"+jogador.imagem+"'class='imagem'></img>"
     var divCards = document.getElementById("cards")
     divCards.appendChild(cardJogador)
-    console.log(divCards)
 }
